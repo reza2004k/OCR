@@ -5,11 +5,12 @@ from google.genai import types
 from PIL import Image
 import io
 import sqlite3
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-API_KEY = "AQ.Ab8RN6Idx86HWA0CMY-Zp-u55AIb3l7QiRSVp2kr5pdthHErQQ"  # کلید جمی‌نای خود را اینجا بگذارید
+API_KEY = os.environ.get("GEMINI_API_KEY")  # کلید جمی‌نای خود را اینجا بگذارید
 client = genai.Client(api_key=API_KEY)
 
 # ساخت دیتابیس برای ذخیره درصد دقت‌ها در اولین اجرای برنامه
