@@ -1,4 +1,7 @@
-Before running the project, make sure you have Python installed, then install the required libraries:
+Steps for running the code:
+
+```bash
+pip install google-genai pillow flask flask-cors
 
 ```bash
 pip install google-genai pillow flask flask-cors
